@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: kubeflow-ingressgateway-certs
+  namespace: istio-system
+spec:
+  secretName: istio-ingressgateway-certs
+  issuerRef:
+    kind: ClusterIssuer
+    name: kubeflow-self-signing-issuer
+  commonName: istio-ingressgateway.istio-system.svc
+  dnsNames:
+  - aeb45ab488b3d4b03bc1160d68dfb819-1412683265.ap-south-1.elb.amazonaws.com

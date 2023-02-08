@@ -1,0 +1,3 @@
+cluster:
+  name: eaas-master-test-eks-runtime
+  region: ap-south-1
